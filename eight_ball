@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random 
+
+print(c.clear)
+print(c.rc() + '''
+I IS BALL OF DE MAGIC 8 ASK ME YOUR MIND AND I WILL RESPOND.''')
+
+answers = [
+    'No Your not',
+    'Its a lie',
+    'Sorry pal',
+    'error 404',
+    'Yes',
+    'pardon?',
+    'Most likely',
+    'Definetly',
+    'JUST, DO IT',
+    '(.Y.)',
+    '(._.)',
+    'Goodbye come again'
+]
+
+def handle_question():
+    question = input("SPEAK ")
+    if 'swag' in question: 
+        print(c.rc() + "The day of your birth is modern") 
+    elif 'love' in question:
+        print(c.red + '''error, value "Love" dose not compute''')
+    else:
+        answer = random.choice(answers)
+        print(c.rc() + answer + c.reset)
+    def ask(prompt):
+        answer = input(prompt).strip().lower()
+        return answer
+    def 'bye' in question:
+        print(c.rc() + answer + c.reset)
+        exit()
+while True:
+    try: 
+        handle_question() 
+    except KeyboardInterrupt:
+        print()
+        print("Well if you want to leave so badly goodbye!")
+        exit()
+
