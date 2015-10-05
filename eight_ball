@@ -22,21 +22,28 @@ answers = [
     'Goodbye come again'
 ]
 
+def ask(prompt):
+    answer = input(prompt).strip().lower()
+    return answer
+
+def bye(prompt):
+    answer = input(prompt).strip().lower()
+    print(c.rc() + answer + c.reset)
+    exit()
+
 def handle_question():
-    question = input("SPEAK ")
+    question = ask("SPEAK ")
     if 'swag' in question: 
         print(c.rc() + "The day of your birth is modern") 
     elif 'love' in question:
         print(c.red + '''error, value "Love" dose not compute''')
+    elif 'bye' in question:
+        print(c.rc() + answer + c.reset)
+        exit()
     else:
         answer = random.choice(answers)
         print(c.rc() + answer + c.reset)
-    def ask(prompt):
-        answer = input(prompt).strip().lower()
-        return answer
-    def 'bye' in question:
-        print(c.rc() + answer + c.reset)
-        exit()
+
 while True:
     try: 
         handle_question() 
